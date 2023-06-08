@@ -13,4 +13,6 @@ Currently in development.
 
 ❌ Frontend Signup, Login, User, Books, CRUD not created yet
 
+❌ Frontend dependancies not yet installed (exept for react)
+
 ❌ Template not yet tested
