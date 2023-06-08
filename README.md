@@ -7,7 +7,7 @@ Currently in development.
 
 ✅ React installed on frontend
 
-✅ Backend node, express, mongoose setup
+✅ Backend node, express, mongoose setup, cloudinary
 
 ✅ Created routes, models, utils, index, package.json
 
