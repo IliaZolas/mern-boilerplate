@@ -1,6 +1,6 @@
 **Mern Boilerplate**
 
-This is a boilerplate for setting MERN apps quickly.
+This is a boilerplate for creating MERN apps quickly.
 Currently in development.
 
 **Checklist**
