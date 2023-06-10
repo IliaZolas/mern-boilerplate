@@ -41,7 +41,7 @@ const UpdateBookForm = () => {
         []);
 
 
-    const uploadUrl = `https://api.cloudinary.com/v1_1/iliacloud9/image/upload`
+    const uploadUrl = `https://api.cloudinary.com/v1_1/cloud9/image/upload`
 
     const uploadImage = async (files) => {
 

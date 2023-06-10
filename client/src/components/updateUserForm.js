@@ -36,7 +36,7 @@ const UpdateUserForm = () => {
         },
         []);
 
-    const uploadUrl = `https://api.cloudinary.com/v1_1/iliacloud9/image/upload`
+    const uploadUrl = `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_USERNAME}/image/upload`
 
     const uploadImage = async (files) => {
         const formData = new FormData()
@@ -97,7 +97,7 @@ const UpdateUserForm = () => {
     return (
         <div>
         <div className="form-user-image-container">
-            <Image className="new-user-image" cloudName="iliacloud9" publicId={imageUrl} />
+            <Image className="new-user-image" cloudName={process.env.CLOUDINARY_USERNAME} publicId={imageUrl} />
         </div>
         <form method="post" onSubmit={handleSubmit} enctype="multipart/form-data">
             <label className="labels">

@@ -16,7 +16,7 @@ const AddUser = () => {
     const [publicId, setPublicId] = useState('');
     const navigate = useNavigate();
 
-    const uploadUrl = `https://api.cloudinary.com/v1_1/iliacloud9/image/upload`
+    const uploadUrl = `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_USERNAME}/image/upload`
 
     const uploadImage = async (files) => {
 
@@ -73,7 +73,7 @@ const handleSubmit = (e) => {
     return (
     <div className="form-container">
         <div className="form-user-image-container">
-            <Image className="new-user-image" cloudName="iliacloud9" publicId={imageUrl} />
+            <Image className="new-user-image" cloudName={process.env.CLOUDINARY_USERNAME} publicId={imageUrl} />
         </div>
         <form method="post" onSubmit={handleSubmit} enctype="multipart/form-data">
             <label className="labels">
