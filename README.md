@@ -11,8 +11,8 @@ Currently in development.
 
 ✅ Created routes, models, utils, index, package.json
 
-❌ Dependancies not yet installed on frontend (react-router-dom etc.)
+✅ Dependancies installed on frontend
 
-❌ Frontend Signup, Login, User, Books, CRUD not created yet
+✅  Frontend Signup, Login, User, Books, CRUD created
 
 ❌ Template not yet tested
