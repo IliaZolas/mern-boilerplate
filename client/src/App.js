@@ -1,25 +1,105 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/navbar';
+import Home from './pages/home';
+import Books from './pages/books';
+import NewBook from './pages/newBook';
+import UpdateBook from './pages/updateBook';
+import ShowBook from './pages/ShowBook';
+import AddUser from './pages/signup';
+import LoginUser from './pages/login';
+import ShowUser from './pages/account';
+import UpdateUser from './pages/updateUser';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import ProtectedRoutes from './ProtectedRoutes';
+import { UserContext } from "./UserContext";
+import { useMemo, useState } from 'react';
+import { useEffect } from 'react';
+import { config } from './config/config';
+
+const URL = config.url;
+console.log("URL shown in App.js",URL)
+console.log("What environment has been detected?", process.env.NODE_ENV)
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const id = localStorage.getItem('id');
+
+    if (id !== null) {
+      console.log("condition true")
+    fetch(`${URL}/app/user/show/${id}`, {
+        method: 'GET',
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            setUser(data);
+        })
+        .catch((err) => {
+            console.log(err.message);
+        });
+    }},
+    []);
+
+  const value = useMemo(() => ({ user, setUser }), [user, setUser]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <UserContext.Provider value={value}>
+        <div className="App">
+          <Navbar />
+          <Routes>
+            <Route 
+                path="/" 
+                element={<Home />} 
+                />
+              <Route 
+                path="/books" 
+                element={<Books />} 
+              />
+              <Route 
+                path="/book/show/:id" 
+                element={<ShowBook />} 
+                />
+              <Route 
+                path="/signup" 
+                element={<AddUser />} 
+                />
+              <Route 
+                path="/login" 
+                element={<LoginUser />} 
+                />
+              <Route element={<ProtectedRoutes/>}>
+                <Route
+                  path="/new-book" 
+                  element={
+                    <NewBook />   
+                  }
+                  />
+                <Route
+                  path="/book/update/:id" 
+                  element={
+                    <UpdateBook />
+                  }
+                  />
+                <Route
+                  path="/user/show/:id" 
+                  element={
+                    <ShowUser />
+                  }
+                />
+                <Route
+                  path="/user/update/:id" 
+                  element={
+                    <UpdateUser />
+                  }
+                  />
+              </Route>
+          </Routes>
+        </div>
+      </UserContext.Provider>
+    </Router>
   );
-}
+};
 
 export default App;
