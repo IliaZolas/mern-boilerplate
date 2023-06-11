@@ -22,7 +22,7 @@ const BookCard = () => {
 
     
     useEffect(() => {
-        fetch(`${URL}/book`)
+        fetch(`${URL}/books`)
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
