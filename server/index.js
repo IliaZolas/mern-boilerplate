@@ -9,7 +9,13 @@ const bodyParser = require('body-parser')
 
 dotenv.config() 
 
-mongoose.connect(process.env.DATABASE_ACCESS, () => console.log("DB connected"))
+mongoose.connect(process.env.DATABASE_ACCESS)
+  .then(() => {
+    console.log("DB connected");
+  })
+  .catch((error) => {
+    console.error("Error connecting to MongoDB:", error);
+  });
 
 const corsOptions = {
     origin: ['https://name-of-your.app', 'http://localhost:3000'],
