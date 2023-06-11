@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import { config } from '../config/config';
-import "./account.css"
+import "./show-user.css"
 
 const URL = config.url;
 

@@ -5,7 +5,6 @@ import { config } from '../config/config';
 import "./book-form.css";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import Dropdown from "./dropdown";
 
 import Cookies from "universal-cookie";
 const cookies = new Cookies();

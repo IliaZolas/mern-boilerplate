@@ -25,7 +25,7 @@ Currently in development.
 
 3. Create .env files and populate them like so
 
-.env in server
+.env in server folder
 
 ```
 DATABASE_ACCESS=put-your-mongodb-access-url-here
@@ -35,7 +35,7 @@ CLOUD_API_KEY=put-your-cloudinary-api-key-here
 CLOUD_API_SECRET=put-your-cloudinary-api-secret-here
 ```
 
-.env in client
+.env in client folder
 
 ```
 CLOUDINARY_USERNAME=your-cloudinary-user-name-here
