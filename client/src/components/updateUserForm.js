@@ -38,12 +38,14 @@ const UpdateUserForm = () => {
 
     const cloudinaryUsername = process.env.REACT_APP_CLOUDINARY_USERNAME
 
+    const cloudinaryPreset = process.env.REACT_APP_CLOUDINARY_PRESET
+
     const uploadUrl = `https://api.cloudinary.com/v1_1/${cloudinaryUsername}/image/upload`
 
     const uploadImage = async (files) => {
         const formData = new FormData()
         formData.append("file", files.target.files[0])
-        formData.append("upload_preset", "yxlthn8k")
+        formData.append("upload_preset", `${cloudinaryPreset}`)
 
         await fetch(uploadUrl, {
             method: 'POST',
