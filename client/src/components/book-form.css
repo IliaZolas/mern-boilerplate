@@ -19,6 +19,11 @@ form {
     padding-left: 550px;
 }
 
+.form-container-login {
+    width: 500px;
+    margin: auto 0;
+}
+
 .labels {
     padding: 5px 0 5px;
     display: flex;

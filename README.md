@@ -39,6 +39,7 @@ CLOUD_API_SECRET=put-your-cloudinary-api-secret-here
 
 ```
 REACT_APP_CLOUDINARY_USERNAME=your-cloudinary-user-name-here
+REACT_APP_CLOUDINARY_PRESET="your-preset-name-in-betwen-these-quotes"
 ```
 
 4. cd server and <code>npm start</code>

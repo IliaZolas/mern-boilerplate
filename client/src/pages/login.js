@@ -59,7 +59,7 @@ const handleSubmit = (e) => {
 };
 
     return (
-    <div className="form-container fade-page">
+    <div className="form-container-login fade-page">
         <form method="post" onSubmit={handleSubmit} enctype="multipart/form-data" className="login-form">
             <label className="labels">
                 Email

@@ -55,7 +55,7 @@ const ShowUser = () => {
                         </div>
                         <h1>{user.name} {user.surname}</h1>
                         <p>{user.email}</p>
-                        <div className="card-button-area">
+                        <div className="user-button-area">
                             <div className="update-button button" onClick={() => updateUser(user._id)} >Update</div>
                             <div className="delete-button button" onClick={() => deleteUser(user._id, user.public_id)} id={user.id}>Delete</div>
                         </div>

@@ -79,6 +79,7 @@ const BookCard = () => {
                         </div>
                         <div className="card-text-area">
                             <h4>{book.title}</h4>
+                            <p dangerouslySetInnerHTML={{ __html: book.description}}></p>
                         {user ? (
                             <div className="card-button-area">
                                 <div className="show-button button" onClick={() => viewBook(book._id)} >
