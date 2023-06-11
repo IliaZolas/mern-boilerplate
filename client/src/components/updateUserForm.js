@@ -103,7 +103,7 @@ const UpdateUserForm = () => {
         <div className="form-user-image-container">
             <Image className="new-user-image" cloudName={cloudinaryUsername} publicId={imageUrl} />
         </div>
-        <form method="post" onSubmit={handleSubmit} enctype="multipart/form-data">
+        <form method="puts" onSubmit={handleSubmit} enctype="multipart/form-data">
             <label className="labels">
                 Name
                 <input 

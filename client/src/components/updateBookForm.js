@@ -93,7 +93,7 @@ const UpdateBookForm = () => {
     const handleSubmit = () => {
         const id = params.id
         updateBook(id, title, description, imageUrl, publicId );
-        navigate(`/books/show/${id}`);
+        navigate(`/book/show/${id}`);
         
     };
     
@@ -103,7 +103,7 @@ const UpdateBookForm = () => {
             <div className="form-image-container">
                 <Image className="new-book-image" cloudName={cloudinaryUsername} publicId={imageUrl} />
             </div>
-            <form method="post" onSubmit={handleSubmit} enctype="multipart/form-data">
+            <form method="puts" onSubmit={handleSubmit} enctype="multipart/form-data">
                 <label className="labels">
                     Title
                     <input 
