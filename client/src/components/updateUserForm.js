@@ -101,7 +101,7 @@ const UpdateUserForm = () => {
     return (
         <div>
         <div className="form-user-image-container">
-            <Image className="new-user-image" cloudName={process.env.CLOUDINARY_USERNAME} publicId={imageUrl} />
+            <Image className="new-user-image" cloudName={cloudinaryUsername} publicId={imageUrl} />
         </div>
         <form method="post" onSubmit={handleSubmit} enctype="multipart/form-data">
             <label className="labels">

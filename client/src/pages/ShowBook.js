@@ -20,7 +20,7 @@ const ShowBook = () => {
     useEffect(() => {
         const id = params.id;
 
-        fetch(`${URL}/book/show/${id}`, {
+        fetch(`${URL}/books/show/${id}`, {
             method: 'GET',
             }).then((response) => response.json())
             .then((data) => {
@@ -50,11 +50,11 @@ const ShowBook = () => {
                         return;
                     }
                 });
-                navigate('/book');
+                navigate('/books');
             };
 
             const allBooks = () => {
-                navigate('/book');
+                navigate('/books');
             }
 
             const updateBook = (id) => {

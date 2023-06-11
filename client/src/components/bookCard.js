@@ -61,7 +61,7 @@ const BookCard = () => {
 
     const viewBook = async (id) => {
         console.log("this is id", id);
-        navigate(`/book/show/${id}`);
+        navigate(`/books/show/${id}`);
     };
 
     const updateBook = (id) => {

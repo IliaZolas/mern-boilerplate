@@ -213,7 +213,7 @@ routes.put('/book/update/:id',auth, (req, res) => {
 
 routes.delete('/book/delete/:id/:public_id/user/:user_id', auth, async (req, res) => {
     try {
-        const booknId = req.params.id;
+        const bookId = req.params.id;
         const book = await Books.findById(bookId);
 
         if (!book) {
@@ -229,7 +229,7 @@ routes.delete('/book/delete/:id/:public_id/user/:user_id', auth, async (req, res
         return res.status(401).json({ msg: 'Not authorized to delete this book' });
         }
 
-        await book.remove();
+        await Books.deleteOne(book);
 
         cloudinary.config({
         cloud_name: process.env.CLOUD_NAME,

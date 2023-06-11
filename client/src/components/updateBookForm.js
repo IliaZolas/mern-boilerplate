@@ -13,7 +13,6 @@ const URL = config.url;
 
 const UpdateBookForm = () => {
     const [title, setTitle ] = useState('');
-    const [ingredients, setIngredients ] = useState('');
     const [description, setDescription ] = useState('');
     const [imageUrl, setImageUrl] = useState('');
     const [publicId, setPublicId] = useState('');
@@ -23,12 +22,11 @@ const UpdateBookForm = () => {
 
     useEffect(() => {
         const id = params.id;
-        fetch(`${URL}/book/show/${id}`, {
+        fetch(`${URL}/books/show/${id}`, {
             method: 'GET',
             }).then((response) => response.json())
             .then((data) => {
                 setTitle(data.title);
-                setIngredients(data.ingredients);
                 setDescription(data.description);
                 setImageUrl(data.imageUrl);
                 setPublicId(data.public_id);
@@ -62,14 +60,13 @@ const UpdateBookForm = () => {
             })            
         };
 
-    const updateBook = async (id, title, ingredients, description, imageUrl, publicId) => {
+    const updateBook = async (id, title, description, imageUrl, publicId) => {
         const token = cookies.get("TOKEN");
 
         await fetch(`${URL}/book/update/${id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 title: title,
-                ingredients: ingredients,
                 description: description,
                 imageUrl: imageUrl,
                 publicId: publicId
@@ -84,7 +81,6 @@ const UpdateBookForm = () => {
             })
             .then(() => {
             setTitle();
-            setIngredients();
             setDescription();
             setImageUrl();
             setPublicId();
@@ -96,8 +92,8 @@ const UpdateBookForm = () => {
 
     const handleSubmit = () => {
         const id = params.id
-        updateBook(id, title, ingredients, description, imageUrl, publicId );
-        navigate(`/book/show/${id}`);
+        updateBook(id, title, description, imageUrl, publicId );
+        navigate(`/books/show/${id}`);
         
     };
     
@@ -105,7 +101,7 @@ const UpdateBookForm = () => {
     return (
         <div className="form-container">
             <div className="form-image-container">
-                <Image className="new-book-image" cloudName={process.env.CLOUDINARY_USERNAME} publicId={imageUrl} />
+                <Image className="new-book-image" cloudName={cloudinaryUsername} publicId={imageUrl} />
             </div>
             <form method="post" onSubmit={handleSubmit} enctype="multipart/form-data">
                 <label className="labels">

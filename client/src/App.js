@@ -58,7 +58,7 @@ function App() {
                 element={<Books />} 
               />
               <Route 
-                path="/book/show/:id" 
+                path="/books/show/:id" 
                 element={<ShowBook />} 
                 />
               <Route 

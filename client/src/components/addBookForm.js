@@ -77,7 +77,7 @@ const handleSubmit = (e) => {
     return (
     <div className="form-container">
         <div className="form-image-container">
-            <Image className="new-book-image" cloudName="YOUR-CLOUD-NAME-HERE" publicId={imageUrl} />
+            <Image className="new-book-image" cloudName={cloudinaryUsername} publicId={imageUrl} />
         </div>
         <form method="post" onSubmit={handleSubmit} enctype="multipart/form-data">
             <label className="labels">
