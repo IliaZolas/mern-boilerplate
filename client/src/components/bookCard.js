@@ -51,7 +51,7 @@ const BookCard = () => {
         },
         }).then((response) => {            
             if (response.status === 200) {
-                setBook();
+                setBook((prevBooks) => prevBooks.filter((book) => book._id !== id));
                 console.log("Book deleted");
                 } else {
                     console.log("Book not deleted");
