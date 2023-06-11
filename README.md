@@ -25,7 +25,7 @@ Currently in development.
 
 3. Create .env files and populate them like so
 
-.env in server folder
+.env in root of server folder
 
 ```
 DATABASE_ACCESS=put-your-mongodb-access-url-here
@@ -35,10 +35,10 @@ CLOUD_API_KEY=put-your-cloudinary-api-key-here
 CLOUD_API_SECRET=put-your-cloudinary-api-secret-here
 ```
 
-.env in client folder
+.env in root of client folder
 
 ```
-CLOUDINARY_USERNAME=your-cloudinary-user-name-here
+REACT_APP_CLOUDINARY_USERNAME=your-cloudinary-user-name-here
 ```
 
 4. cd server and <code>npm start</code>

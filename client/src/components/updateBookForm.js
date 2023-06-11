@@ -38,9 +38,10 @@ const UpdateBookForm = () => {
             });
         },
         []);
+    
+    const cloudinaryUsername = process.env.REACT_APP_CLOUDINARY_USERNAME
 
-
-    const uploadUrl = `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_USERNAME}/image/upload`
+    const uploadUrl = `https://api.cloudinary.com/v1_1/${cloudinaryUsername}/image/upload`
 
     const uploadImage = async (files) => {
 

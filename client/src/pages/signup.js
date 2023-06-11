@@ -18,15 +18,14 @@ const AddUser = () => {
 
     const cloudinaryUsername = process.env.REACT_APP_CLOUDINARY_USERNAME
 
-    console.log(cloudinaryUsername)
-
     const uploadUrl = `https://api.cloudinary.com/v1_1/${cloudinaryUsername}/image/upload`
 
     const uploadImage = async (files) => {
 
         const formData = new FormData()
         formData.append("file", files.target.files[0])
-        formData.append("upload_preset", "yxlthn8k")
+        formData.append("upload_preset", "f1yuhuk7")
+        // formData.append("upload_preset", "yxlthn8k")
 
         await fetch(uploadUrl, {
             method: 'POST',
@@ -40,7 +39,7 @@ const AddUser = () => {
         };
 
     const AddUser = async ( name, surname, email, password, imageUrl, publicId) => {
-        await fetch(`${URL}/app/signup`, {
+        await fetch(`${URL}/signup`, {
         method: 'POST',
         body: JSON.stringify({
             name: name,
@@ -77,7 +76,7 @@ const handleSubmit = (e) => {
     return (
     <div className="form-container">
         <div className="form-user-image-container">
-            <Image className="new-user-image" cloudName={process.env.CLOUDINARY_USERNAME} publicId={imageUrl} />
+            <Image className="new-user-image" cloudName={cloudinaryUsername} publicId={imageUrl} />
         </div>
         <form method="post" onSubmit={handleSubmit} enctype="multipart/form-data">
             <label className="labels">
