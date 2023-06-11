@@ -19,7 +19,7 @@ const LoginUser = () => {
     
 // login incorrect, its allowing any type of input to access
     const loginUser = async ( email, password ) => {
-        await fetch(`${URL}/app/login`, {
+        await fetch(`${URL}/login`, {
         method: 'POST',
         body: JSON.stringify({
             email: email,
@@ -50,7 +50,7 @@ const LoginUser = () => {
         .catch((err) => {
         console.log(err.message , ":error message");
     });
-    navigate('/book');
+    navigate('/books');
 };
 
 const handleSubmit = (e) => {

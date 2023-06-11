@@ -28,7 +28,7 @@ function App() {
 
     if (id !== null) {
       console.log("condition true")
-    fetch(`${URL}/app/user/show/${id}`, {
+    fetch(`${URL}/user/show/${id}`, {
         method: 'GET',
         })
         .then((response) => response.json())

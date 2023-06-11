@@ -20,7 +20,7 @@ const ShowBook = () => {
     useEffect(() => {
         const id = params.id;
 
-        fetch(`${URL}/app/book/show/${id}`, {
+        fetch(`${URL}/book/show/${id}`, {
             method: 'GET',
             }).then((response) => response.json())
             .then((data) => {
@@ -37,7 +37,7 @@ const ShowBook = () => {
             console.log("delete:",public_id)
             const token = cookies.get("TOKEN");
 
-            fetch(`${URL}/app/book/delete/${id}/${public_id}`, {
+            fetch(`${URL}/book/delete/${id}/${public_id}`, {
             method: 'DELETE',
             headers: {
             'Authorization': `${token}`,

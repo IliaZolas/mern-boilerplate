@@ -40,7 +40,7 @@ const AddBook = () => {
     const AddBook = async ( title, description, imageUrl, publicId, user) => {
         const userId = localStorage.getItem('id')
         console.log(userId,": this is the logged in user id")
-        await fetch(`${URL}/app/book/add`, {
+        await fetch(`${URL}/book/add`, {
         method: 'POST',
         body: JSON.stringify({
             title: title,

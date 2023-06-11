@@ -20,7 +20,7 @@ const UpdateUserForm = () => {
 
     useEffect(() => {
         const id = params.id;
-        fetch(`${URL}/app/user/show/${id}`, {
+        fetch(`${URL}/user/show/${id}`, {
             method: 'GET',
             }).then((response) => response.json())
             .then((data) => {
@@ -59,7 +59,7 @@ const UpdateUserForm = () => {
     const updateUser = async (id, name, surname, email, imageUrl, publicId) => {
         const token = cookies.get("TOKEN");
 
-        await fetch(`${URL}/app/user/update/${id}`, {
+        await fetch(`${URL}/user/update/${id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 name: name,

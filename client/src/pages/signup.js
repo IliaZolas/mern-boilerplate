@@ -65,7 +65,7 @@ const AddUser = () => {
         .catch((err) => {
         console.log(err.message , ":error message");
     });
-    navigate('/book');
+    navigate('/books');
 };
 
 const handleSubmit = (e) => {
