@@ -13,9 +13,11 @@ Currently in development.
 
 ✅ Dependancies installed on frontend
 
-✅  Frontend Signup, Login, User, Books, CRUD created
+✅ Frontend Signup, Login, User, Books, CRUD created
 
-❌ Template not yet tested
+✅ Template tested, some basic errors but it works
+
+❌ Corrections of basic errors
 
 **Instructions**
 
