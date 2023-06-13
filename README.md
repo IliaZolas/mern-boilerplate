@@ -1,4 +1,4 @@
-**Mern Boilerplate**
+<h1>Mern Boilerplate**</h1>
 
 🍳 This is a boilerplate for creating MERN apps quickly.
 
@@ -6,7 +6,7 @@
 
 🔑 Signup and Login have been provided. 
 
-👮 Frontend Protected routes and authorisation on backend routes have been provided too.
+👮 Frontend protected routes and authorisation on backend routes have been provided too.
 
 ⚙️ Conditional rendering based on if user is logged in or not.
 
