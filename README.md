@@ -1,12 +1,14 @@
 **Mern Boilerplate**
 
-This is a boilerplate for creating MERN apps quickly.
+🍳 This is a boilerplate for creating MERN apps quickly.
 
-Currently, it holds a basic CRUD configuration where a user can add, update, view or delete a book.
+🤖 Currently, it holds a basic CRUD configuration where a user can add, update, view or delete a book.
 
-Signup and Login have been provided. Frontend Protected routes and authorisation on backend routes have bbeen provided too.
+🔑 Signup and Login have been provided. 
 
-Conditional rendering based on if user is logged in or not.
+👮 Frontend Protected routes and authorisation on backend routes have been provided too.
+
+⚙️ Conditional rendering based on if user is logged in or not.
 
 **Checklist**
 
