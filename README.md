@@ -1,4 +1,4 @@
-<h1>Mern Boilerplate**</h1>
+<h1>Mern Boilerplate</h1>
 
 🍳 This is a boilerplate for creating MERN apps quickly.
 
