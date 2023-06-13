@@ -110,6 +110,7 @@ const UpdateBookForm = () => {
                         type="text" 
                         name="title" 
                         placeholder={title}
+                        value={title}
                         onChange={e => setTitle(e.target.value)} />
                 </label>
                 <label className="labels">
