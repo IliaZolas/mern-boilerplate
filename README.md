@@ -1,7 +1,12 @@
 **Mern Boilerplate**
 
 This is a boilerplate for creating MERN apps quickly.
-Currently in development.
+
+Currently, it holds a basic CRUD configuration where a user can add, update, view or delete a book.
+
+Signup and Login have been provided. Frontend Protected routes and authorisation on backend routes have bbeen provided too.
+
+Conditional rendering based on if user is logged in or not.
 
 **Checklist**
 
@@ -17,7 +22,9 @@ Currently in development.
 
 ✅ Template tested, some basic errors but it works
 
-❌ Corrections of basic errors
+✅ Corrections of basic errors
+
+✅ Ready to go!
 
 **Instructions**
 
@@ -47,3 +54,9 @@ REACT_APP_CLOUDINARY_PRESET="your-preset-name-in-betwen-these-quotes"
 4. cd server, <code>npm install</code> and then <code>npm start</code>
 
 5. cd client, <code>npm install</code> and then <code>npm start</code>
+
+**Working with MongoDB**
+
+Make sure to include your IP address of your workplaces in the MongoDB dashboard. 
+
+For development purposes, you can also set MongoDB to accept requests from any IP address to avoid confusion when working from different places.
