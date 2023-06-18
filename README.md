@@ -1,6 +1,6 @@
 <h1>Mern Boilerplate</h1>
 
-🍳 This is a boilerplate for creating MERN apps quickly.
+🍳 This is a boilerplate to quickly setup a webapp using MongoDB, Express, React and Node.
 
 🤖 Currently, it holds a basic CRUD configuration where a user can add, update, view or delete a book.
 
