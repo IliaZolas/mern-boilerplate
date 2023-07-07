@@ -8,23 +8,9 @@
 
 👮 Frontend protected routes and authorisation on backend routes have been provided too.
 
-⚙️ Conditional rendering based on if user is logged in or not.
+⚙️ Conditional rendering based on user authentication.
 
 **Checklist**
-
-✅ React installed on frontend
-
-✅ Backend node, express, mongoose setup, cloudinary
-
-✅ Created routes, models, utils, index, package.json
-
-✅ Dependancies installed on frontend
-
-✅ Frontend Signup, Login, User, Books, CRUD created
-
-✅ Template tested, some basic errors but it works
-
-✅ Corrections of basic errors
 
 ✅ Ready to go!
 
